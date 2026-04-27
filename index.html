@@ -1,0 +1,225 @@
+:root {
+    --white: #ffffff;
+    --red: #d32f2f;
+    --ash: #4a4a4a;
+    --light-ash: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--ash);
+    line-height: 1.6;
+}
+
+/* Watermark Logic */
+.watermark {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--ash);
+    opacity: 0.3;
+    z-index: 1000;
+    pointer-events: none;
+   ;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background: var(--white);
+}
+
+.brand-logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--red);
+    border-left: 4px solid var(--red);
+    padding-left: 10px;
+}
+
+nav ul { display: flex; list-style: none; gap: 2rem; }
+nav a { text-decoration: none; color: var(--ash); font-weight: 500; }
+
+/* Hero Section */
+.hero {
+    padding: 100px 5%;
+    background: var(--light-ash);
+    text-align: left;
+}
+
+.hero h1 { font-size: 4rem; color: var(--ash); }
+.accent { color: var(--red); }
+.hero h2 { font-size: 1.5rem; margin-bottom: 20px; opacity: 0.8; }
+
+.tool-tags span {
+    display: inline-block;
+    background: var(--ash);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/* Grid Layouts */
+.portfolio { padding: 80px 5%; }
+.section-title { margin-bottom: 40px; border-bottom: 2px solid var(--red); display: inline-block; }
+
+.video-grid, .design-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 100px;
+    margin-bottom: 60%;
+}
+
+.placeholder-video, .design-card {
+    background: #ffffff;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8%;
+    overflow: hidden;
+    border: 1px solid #ffffff;
+}
+
+.design-card img { width: 100%; height: 100%; object-fit: cover; transition: 0,3; }
+.design-card img:hover { transform: scale(1.0); }
+
+/* Footer */
+footer {
+    background: var(--ash);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 5%;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: var(--red);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+}
+.design-card2{
+   width: 100%;
+    height: 100%; 
+ background: #ffffff;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8%;
+    overflow: hidden;
+    border: 1px solid #ffffff;
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obafemi Beloved Jesulayomi | Big Loved Graphics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="watermark"> THE BIG LOVED  </div>
+
+    <nav>
+        <div class="brand-logo"> THE BIG LOVED </div>
+        <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Obafemi <span class="accent">Beloved Jesulayomi</span></h1>
+        <h2>Graphic Designer |Video & Photo Editor | Website Developer </h2>
+           
+            <p>Crafting high-quality, clean, and creative stories through visual media.</p>
+            <div class="tool-tags">
+                <span>Photoshop</span> <span>CorelDRAW</span><span>CapCut</span><span>Vistual Studio Code </span>
+            </div>
+        </div>
+    </header>
+
+    <section id="work" class="portfolio">
+        <h2 class="section-title">Professional Showcase</h2>
+        
+        <h3>Video Editing & Motion</h3>
+        <div class="video-grid">
+            <div class="video-card">
+              <img class="design-card2" src="Screenshot 2026-04-24 124734.png" alt="">
+                <div class="placeholder-video"> <video src="mine content one (1).mp4"></video></div>
+                <h4>Creative Storytelling</h4><br>
+            </div>
+        </div>
+<br>
+        <h3>Graphic Design|Photo Retouching| Website development|</h3>
+        <div class="design-grid">
+            
+            <div class="design-card"><img src="ChatGPT Image Jan 23, 2026, 10_51_35 PM.png" alt="Flyer Design"></div>
+            <div class="design-card"><img src="meme.png" alt="Social Media Graphics"></div>
+            <div class="design-card"><img src="work.png" alt="Branding"></div>
+            <div class="design-card"><img src="file_00000000928471fdbc64a7ca0c845001.png" alt="" srcset=""></div>
+            <div class="design-card"><img src="166a38b7-0025-4d19-a0cd-a9b66e1afd19.png" alt="" srcset=""></div>
+            <div class="design-card"><img src="ChatGPT Image Jan 23, 2026, 10_52_00 PM.png" alt="" srcset=""></div>
+            <div class="design-card"><img src="MAMAMA.png" alt="" srcset=""></div>
+            <div class="design-card"><img src="mememememem.png" alt="" srcset=""></div>
+            <div class="design-card"><img src="file_000000002bb871f8b509b00d2fd6c6f7.png" alt="" srcset=""></div>
+            <div class="design-card"><img src="momo.png" alt=""></div>
+            <div class="design-card"><img src="lightroom.png" alt=""></div>
+            <div class="design-card"><img src="phone.png" alt=""></div>
+            <div class="design-card"><img src="photoshop.png" alt=""></div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 class="section-title">About Me</h2>
+                <p>I am a creative|Graphic Designer|Video & photo Editor |Web Develper based in Nigeria with over 3 years of experience. I specialize in creating visually compelling designs that tell clear stories and engage audiences.</p>
+                <ul class="skills-list">
+                    <li>✓ Photo Manipulation & Retouching</li>
+                    <li>✓ Flyer & Poster Design</li>
+                    <li>✓ Branding & Visual Identity</li>
+                    <li>✓ Frontend & backend developer</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Let's Collaborate</h2>
+        <p>Currently open to creative projects and brand collaborations.</p>
+        <a href="mailto:Obafemibelovedjesulayomi@gmail.com" class="contact-btn">Message Obafemi</a>
+        <p>Phone Number:+2347089074147/+2348052755232</p>
+        <p class="location">Based in Nigeria | Available Worldwide</p>
+    </footer>
+
+</body>
+</html>
